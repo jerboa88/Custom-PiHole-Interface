@@ -1,6 +1,7 @@
 The MIT License (MIT)
 
-Copyright (c) 2014-2015 almasaeed2010
+Original work: Copyright (c) 2014-2015 almasaeed2010
+Modified work: Copyright (c) 2016 John Goodliff
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

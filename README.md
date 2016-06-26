@@ -1,13 +1,10 @@
-Pi-hole Admin Dashboard
-============
-[![Join the chat at https://gitter.im/pi-hole/AdminLTE](https://badges.gitter.im/pi-hole/AdminLTE.svg)](https://gitter.im/pi-hole/AdminLTE?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# Custom Pi-hole Interface
 
-[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif "AdminLTE Presentation")](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3J2L3Z4DHW9UY "Donate")
+This project is forked from the [Pi-hole Admin Dashboard](https://github.com/pi-hole/AdminLTE), which was made using [AdminLTE](https://almsaeedstudio.com) and released under the MIT License. Modifications to this project made by me or others is also licensed under MIT.
 
-Using **[AdminLTE](https://almsaeedstudio.com)**, this project will create a Web interface for the ad-blocking Pi-hole: **a black hole for Internet advertisements**.
+This project will create a Web interface for the ad-blocking [Pi-hole](https://github.com/pi-hole/pi-hole). From this interface, you will be able to see stats on how well your Pi-hole is performing and update the lists used to block ads.
 
-From this interface, you will be able to see stats on how well your Pi-hole is performing.  You will also be able to update the lists used to block ads.
-
+These are screenshots of the original project:
 ![Pi-hole Web interface](http://i.imgur.com/5lLAUGo.png)
 ![Fully responsive](http://i.imgur.com/fHuWR6E.png)
 
