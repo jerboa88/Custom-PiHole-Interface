@@ -36,18 +36,12 @@ $.getJSON("https://api.github.com/repos/pi-hole/pi-hole/releases/latest", functi
 	if(versionCompare(piholeVersion, json.tag_name.slice(1)) < 0) {
 		// Alert user
 		$("#alPiholeUpdate").show();
-		if(!$("#dropdown-menu").hasClass("open")) {
-			$("#dropdown-menu").addClass("open");
-		}
 	}
 });
 $.getJSON("https://api.github.com/repos/pi-hole/AdminLTE/releases/latest", function(json) {
 	if(versionCompare(webVersion, json.tag_name.slice(1)) < 0) {
 		// Alert user
 		$("#alWebUpdate").show();
-		if(!$("#dropdown-menu").hasClass("open")) {
-			$("#dropdown-menu").addClass("open");
-		}
 	}
 });
 
