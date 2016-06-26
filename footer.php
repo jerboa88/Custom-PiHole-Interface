@@ -3,7 +3,7 @@
 	</div>
 	<!-- /.content-wrapper -->
 	<footer class="main-footer">
-		<div class="pull-right hidden-xs">
+		<div class="pull-right hidden-xs" style="line-height: 0">
 			<?php
 			$piholeVersion = exec("cd /etc/.pihole/ && git describe --tags --abbrev=0");
 			$webVersion = exec("cd /var/www/html/admin/ && git describe --tags --abbrev=0");
