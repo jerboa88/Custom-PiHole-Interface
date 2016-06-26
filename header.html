@@ -23,7 +23,7 @@
 	<link href="css/skin-blue.min.css" rel="stylesheet" type="text/css" />
 	<link rel="icon" type="image/png" href="img/pihole-160x160.jpg" />
 	<style type="text/css">
-		.glow {text-shadow: 0px 0px 5px #fff;}
+		.glow {text-shadow: 0px 0px 5px #fff}
 		h3 {transition-duration: 500ms}
 	</style>
 
@@ -95,15 +95,6 @@
 								<div id="alWebUpdate" class="alert alert-info alert-dismissible fade in" role="alert" hidden>
 									<a class="alert-link" href="https://github.com/pi-hole/AdminLTE/releases">There's an update available for this Web Interface!</a>
 								</div>
-
-								<!-- PayPal -->
-								<div>
-									<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-										<input type="hidden" name="cmd" value="_s-xclick">
-										<input type="hidden" name="hosted_button_id" value="3J2L3Z4DHW9UY">
-										<input style="display: block; margin: 0 auto;" type="image" src="img/donate.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-									</form>
-								</div>
 							</li>
 						</ul>
 					</li>
@@ -125,9 +116,9 @@
 					<?php
 						$pistatus = exec('pgrep dnsmasq | wc -l');
 						if ($pistatus > "0") {
-							echo '<a href="#"><i class="fa fa-circle" style="color:#7FFF00"></i> Active</a>';
+							echo '<a href="#"><i class="fa fa-circle" style="color: #7FFF00"></i> Active</a>';
 						} else {
-							echo '<a href="#"><i class="fa fa-circle" style="color:#FF0000"></i> Offline</a>';
+							echo '<a href="#"><i class="fa fa-circle" style="color: #F00"></i> Offline</a>';
 						}
 					?>
 				</div>
@@ -157,12 +148,6 @@
 				<li>
 					<a href="list.php?l=black">
 						<i class="fa fa-ban"></i> <span>Blacklist</span>
-					</a>
-				</li>
-				<!-- Donate -->
-				<li>
-					<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3J2L3Z4DHW9UY">
-						<i class="fa fa-paypal"></i> <span>Donate</span>
 					</a>
 				</li>
 			</ul>
