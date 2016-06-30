@@ -3,16 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://api.github.com; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'">
-	<title>Pi-hole Admin Console</title>
+	<title>Pi-hole Admin Interface</title>
 	<!-- Tell the browser to be responsive to screen width -->
-	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-	<meta name="theme-color" content="#367fa9">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
-	<meta name="msapplication-TileColor" content="#367fa9">
-	<meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<link href="css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -20,19 +13,29 @@
 	<link href="css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css" />
 
 	<link href="css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
-	<link href="css/skin-blue.min.css" rel="stylesheet" type="text/css" />
-	<link rel="icon" type="image/png" href="img/pihole-160x160.jpg" />
-	<style type="text/css">
-		.glow {text-shadow: 0px 0px 5px #fff}
-		h3 {transition-duration: 500ms}
-	</style>
+	<link href="css/skin-purple.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/custom-styles.css" rel="stylesheet" type="text/css" />
+
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/img/favicon-194x194.png" sizes="194x194">
+	<link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/img/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/img/manifest.json">
+	<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#605ca8">
+	<link rel="shortcut icon" href="/img/favicon.ico">
+	<meta name="msapplication-TileColor" content="#222d32">
+	<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+	<meta name="msapplication-config" content="/img/browserconfig.xml">
+	<meta name="theme-color" content="#605ca8">
 
 	<!--[if lt IE 9]>
 	<script src="js/other/html5shiv.min.js"></script>
 	<script src="js/other/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body class="skin-blue sidebar-mini">
+<body class="skin-purple sidebar-mini">
 <!-- JS Warning -->
 <div>
 	<link rel="stylesheet" type="text/css" href="css/js-warn.css">
@@ -49,30 +52,30 @@
 <div class="wrapper">
 	<header class="main-header">
 		<!-- Logo -->
-		<a href="http://pi-hole.net" class="logo">
-			<!-- mini logo for sidebar mini 50x50 pixels -->
-			<span class="logo-mini"><b>P</b>H</span>
-			<!-- logo for regular state and mobile devices -->
-			<span class="logo-lg"><b>Pi</b>-hole</span>
+		<a href="#" class="logo" data-toggle="offcanvas">
+			<span class="logo-mini">Pi</span> <!-- mini logo for sidebar mini 50x50 pixels -->
+			<span class="logo-lg">Pi-hole Interface</span> <!-- logo for regular state and mobile devices -->
 		</a>
 		<!-- Header Navbar: style can be found in header.less -->
 		<nav class="navbar navbar-static-top" role="navigation">
 			<!-- Sidebar toggle button-->
-			<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+			<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"> <!-- Turn this into reload button -->
 				<span class="sr-only">Toggle navigation</span>
 			</a>
 			<div class="navbar-custom-menu">
 				<ul class="nav navbar-nav">
 					<!-- User Account: style can be found in dropdown.less -->
 					<li id="dropdown-menu" class="dropdown user user-menu">
-						<a href="#" class="dropdown-toggle">
-							<img src="img/pihole-160x160.jpg" class="user-image" alt="Pi-hole logo" />
-							<span class="hidden-xs">Pi-hole</span>
+						<!-- <a href="#" class="dropdown-toggle"> sidebar-toggle
+							<i class="fa fa-ellipsis-v">
+						</a> -->
+						<a href="#" class="dropdown-toggle" >
+							<i class="fa fa-ellipsis-v"></i>
 						</a>
 						<ul class="dropdown-menu">
 							<!-- User image -->
 							<li class="user-header">
-								<img src="./img/pihole-160x160.jpg" alt="User Image" />
+								<img src="./img/icon.svg" alt="User Image" />
 								<p>
 									Open Source Ad Blocker
 									<small>Designed For Raspberry Pi</small>
@@ -93,12 +96,16 @@
 							<!-- Menu Footer -->
 							<li class="user-footer">
 								<!-- Update alerts -->
-								<div id="alPiholeUpdate" class="alert alert-info alert-dismissible fade in" role="alert" hidden>
-									<a class="alert-link" href="https://github.com/pi-hole/pi-hole/releases">There's an update available for this Pi-hole!</a>
-								</div>
-								<div id="alWebUpdate" class="alert alert-info alert-dismissible fade in" role="alert" hidden>
-									<a class="alert-link" href="https://github.com/jerboa88/Custom-PiHole-Interface/releases">There's an update available for this Web Interface!</a>
-								</div>
+								<a class="alert-link" href="https://github.com/pi-hole/pi-hole/releases">
+									<div id="alPiholeUpdate" class="alert alert-info alert-dismissible fade in" role="alert" hidden>
+										There's an update available for this Pi-hole!
+									</div>
+								</a>
+								<a class="alert-link" href="https://github.com/jerboa88/Custom-PiHole-Interface/releases">
+									<div id="alWebUpdate" class="alert alert-info alert-dismissible fade in" role="alert" hidden>
+										There's an update available for this Web Interface!
+									</div>
+								</a>
 							</li>
 						</ul>
 					</li>
@@ -113,41 +120,42 @@
 			<!-- Sidebar user panel -->
 			<div class="user-panel">
 				<div class="pull-left image">
-					<img src="img/pihole-160x160.jpg" class="img-circle" alt="Pi-hole logo" />
+					<img src="img/icon.svg" class="img-circle" alt="Pi-hole logo"/>
 				</div>
 				<div class="pull-left info">
 					<p>Status</p>
 					<?php
 						$pistatus = exec('pgrep dnsmasq | wc -l');
-						if ($pistatus > "0") {
-							echo '<a href="#"><i class="fa fa-circle" style="color: #7FFF00"></i> Active</a>';
-						} else {
-							echo '<a href="#"><i class="fa fa-circle" style="color: #F00"></i> Offline</a>';
-						}
+						if ($pistatus > "0") {echo '<a href="#"><i class="fa fa-circle" style="color: #00a65a"></i> Active</a>';}
+						else {echo '<a href="#"><i class="fa fa-circle" style="color: #dd4b39"></i> Offline</a>';}
 					?>
 				</div>
 			</div>
 			<!-- sidebar menu: : style can be found in sidebar.less -->
 			<ul class="sidebar-menu">
 				<li class="header">MAIN NAVIGATION</li>
+
 				<!-- Home Page -->
 				<li>
 					<a href="index.php">
 						<i class="fa fa-home"></i> <span>Main Page</span>
 					</a>
 				</li>
+
 				<!-- Query Log -->
 				<li>
 					<a href="queries.php">
 						<i class="fa fa-file-text-o"></i> <span>Query Log</span>
 					</a>
 				</li>
+
 				<!-- Whitelist -->
 				<li>
 					<a href="list.php?l=white">
 						<i class="fa fa-pencil-square-o"></i> <span>Whitelist</span>
 					</a>
 				</li>
+
 				<!-- Blacklist -->
 				<li>
 					<a href="list.php?l=black">
