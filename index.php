@@ -24,7 +24,7 @@
 				<span class="info-box-number" id="ads_blocked_today">0</span>
 				<!-- The progress section is optional -->
 				<div class="progress"><div class="progress-bar" id="ads_percentage_today_progress"></div></div>
-				<span class="progress-description" id="ads_percentage_today"><span>99</span>% Of Traffic Is Ads</span>
+				<span class="progress-description" id="ads_percentage_today"><span>0</span>% Of Traffic Is Ads</span>
 			</div>
 		</div>
 	</div>
