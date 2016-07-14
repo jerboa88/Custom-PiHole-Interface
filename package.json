@@ -1,0 +1,23 @@
+{
+	"name": "custom-pihole-interface",
+	"version": "1.4.0",
+	"description": "A custom dashboard for Pi-hole",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "echo Minify and concat js/css here"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jerboa88/Custom-PiHole-Interface.git"
+	},
+	"author": "jerboa88 <jerboa88@users.noreply.github.com> (https://jerboa88.github.io/)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/jerboa88/Custom-PiHole-Interface/issues"
+	},
+	"homepage": "https://github.com/jerboa88/Custom-PiHole-Interface#readme",
+	"devDependencies": {
+		"clean-css": "^3.4.18",
+		"uglify-js": "^2.7.0"
+	}
+}

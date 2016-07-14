@@ -1,9 +1,11 @@
+dist/
+node_modules/
+npm-debug.log*
+.npm
+Thumbs.db
 *.DS_Store
-.idea
-/nbproject/private/
-/nbproject/
-/node_modules/
-TODO
+*.DS_Store?
+.Trashes
 *.zip
-test.html
 *.log
+STARTSERVER.sh
