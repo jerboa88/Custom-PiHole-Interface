@@ -1,39 +1,61 @@
-# Custom Pi-hole Interface v1.4
+<!-- Project Header -->
+<div align="center">
+  <img class="projectLogo" src="img/icon.svg" alt="Project logo" title="Project logo" width="256">
 
+  <h1 class="projectName">Custom Pi-hole Interface</h1>
 
-### Install
-I am plannng on making an install script to make this super easy/snazzy but for now just do this. It is pretty self-explanatory but I've included comments anyways. Make sure you don't paste those into the terminal.
-```sh
-cd /var/www/html    # Change to the web server directory
-sudo rm -r admin/   # Remove a previous version of the web interface (Do not do this if you are installing from scrath. This step is only needed if you are updating)
-git clone --depth 1 https://github.com/jerboa88/Custom-PiHole-Interface.git admin   # Download (clone) the repository into the admin/ folder
-sudo rm -r admin/.git/ admin/.github/   # (Optional) Remove uneeded files
-```
-That's it!
-
-
-### About
-This project is forked from the [Pi-hole Admin Dashboard](https://github.com/pi-hole/AdminLTE), which was made using [AdminLTE](https://almsaeedstudio.com) and released under the MIT License. Modifications to this project made by me or others is also licensed under MIT.
-
-This project will create a Web interface for the ad-blocking [Pi-hole](https://github.com/pi-hole/pi-hole). From this interface, you will be able to see stats on how well your Pi-hole is performing and update the lists used to block ads. My goal, ultimately, is to make a lighter, sexier, more feature-packed version of the interface created by the Pi-hole team.
-
-Here are some screenshots:
-<div style="display:flex">
-<a href="screenshots/desktop_main.png"><img src="screenshots/desktop_main.png" alt="Main page on desktop"></a>
-<a href="screenshots/desktop_queries.png"><img src="screenshots/desktop_queries.png" alt="Queries page on desktop"></a>
-<a href="screenshots/desktop_whitelist.png"><img src="screenshots/desktop_whitelist.png" alt="Whitelist page on desktop"></a>
-<a href="screenshots/desktop_blacklist.png"><img src="screenshots/desktop_blacklist.png" alt="Blacklist page on desktop"></a>
-</div>
-<div style="display:flex">
-<a href="screenshots/mobile_main.png"><img src="screenshots/mobile_main.png" alt="Main page on mobile"></a>
-<a href="screenshots/mobile_queries.png"><img src="screenshots/mobile_queries.png" alt="Queries page on mobile"></a>
-<a href="screenshots/mobile_whitelist.png"><img src="screenshots/mobile_whitelist.png" alt="Whitelist page on mobile"></a>
-<a href="screenshots/mobile_blacklist.png"><img src="screenshots/mobile_blacklist.png" alt="Blacklist page on mobile"></a>
+  <p class="projectBadges">
+	<a href="https://unmaintained.tech/">
+      <img src="https://unmaintained.tech/badge.svg" alt="No Maintenance Intended" title="No Maintenance Intended"/>
+    </a>
+    <img src="https://img.shields.io/badge/type-Web_Interface-ff5722.svg" alt="Project type" title="Project type"/>
+    <img src="https://img.shields.io/github/languages/top/jerboa88/Custom-PiHole-Interface.svg" alt="Language" title="Language"/>
+    <img src="https://img.shields.io/github/repo-size/jerboa88/Custom-PiHole-Interface.svg" alt="Repository size" title="Repository size"/>
+    <a href="LICENSE">
+      <img src="https://img.shields.io/github/license/jerboa88/Custom-PiHole-Interface.svg" alt="Project license" title="Project license"/>
+    </a>
+  </p>
+  
+  <p class="projectDesc">
+    A custom web interface for Pi-hole, a DNS-based ad filter
+  </p>
+  
+  <br/>
 </div>
 
 
-### API
-A read-only API can be accessed at `/admin/api.php`. With either no parameters or `api.php?summary` it returns the following JSON:
+> **Note:** I've marked this project as **UNMAINTAINED** because it hasn't seen an update in a while. You can still fork/download/use this project at your own risk, but I won't be able to provide support or updates. [More details](https://unmaintained.tech)
+
+
+## About
+This project is forked from the [Pi-hole Admin Dashboard](https://github.com/pi-hole/AdminLTE), which was made using [AdminLTE](https://almsaeedstudio.com).
+
+This project will create a Web interface for the ad-blocking [Pi-hole](https://github.com/pi-hole/pi-hole). From this interface, you will be able to see stats on how well your Pi-hole is performing and update the lists used to block ads. The goal of this project is to make a lighter, more feature-packed version of the interface created by the Pi-hole team.
+
+
+## Installation
+Use the following commands to manually install this web interface:
+1. Change to the web server directory: `cd /var/www/html`
+2. (If updating) Remove the previous version of the web interface: `sudo rm -r admin/`
+3. Clone the repository into a new `admin` folder: `git clone --depth 1 https://github.com/jerboa88/Custom-PiHole-Interface.git admin`
+4. (Optional) Remove unused files: `sudo rm -r admin/.git/ admin/.github/`
+5. Profit!
+
+
+## Screenshots
+Desktop site | &#8291;
+:-:|:-:
+![Screenshot 1](screenshots/desktop_main.png) | ![Screenshot 2](screenshots/desktop_queries.png)
+![Screenshot 3](screenshots/desktop_whitelist.png) | ![Screenshot 4](screenshots/desktop_blacklist.png)
+
+Mobile site | &#8291;
+:-:|:-:
+![Screenshot 1](screenshots/mobile_main.png) | ![Screenshot 2](screenshots/mobile_queries.png)
+![Screenshot 3](screenshots/mobile_whitelist.png) | ![Screenshot 4](screenshots/mobile_blacklist.png)
+
+
+## API
+A read-only API can be accessed at `/admin/api.php` that returns a JSON response similar to the following:
 ```JSON
 {
 	"domains_being_blocked": "136,708",
@@ -43,12 +65,20 @@ A read-only API can be accessed at `/admin/api.php`. With either no parameters o
 }
 ```
 
-There are many more parameters, such as `summaryRaw`, `overTimeData`, `topItems`, `recentItems`, `getQueryTypes`, `getForwardDestinations`, `getQuerySources`, and finally `getAllQueries`.
+The following query parameters can be used to access other information from the API:
+- `?summaryRaw`
+- `?overTimeData`
+- `?topItems`
+- `?recentItems`
+- `?getQueryTypes`
+- `?getForwardDestinations`,
+- `?getQuerySources`
+- `?getAllQueries`
 
 
-### Contributing
-This is actually just a personal project, but if you think you have something usefu to add, you can submit a pull request. A couple formatting things:
-- Use tabs, not spaces
-- Use semicolons only when neccesary
+## Contributing
+This project is unmaintained and as such, I am no longer accepting pull requests. If you have something to add, feel free to fork this project.
 
-I have some other formatting quirks but those are likely personal problems.
+
+## License
+This project is licensed under the [MIT License](LICENSE).
