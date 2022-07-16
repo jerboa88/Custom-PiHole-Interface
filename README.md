@@ -81,4 +81,4 @@ This project is unmaintained and as such, I am no longer accepting pull requests
 
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License. See [LICENSE](LICENSE.md) for details.
