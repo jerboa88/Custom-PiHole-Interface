@@ -1,0 +1,12 @@
+{
+  "$schema": "https://johng.io/schema/project-metadata.json",
+  "name": "Custom Pi-hole Interface",
+	"logoPath": "img/icon.svg",
+	"category": "App",
+	"subcategory": "Web",
+  "schema": {
+    "type": "Software",
+    "applicationCategory": "Developer",
+    "operatingSystem": "Linux"
+  }
+}
