@@ -8,7 +8,7 @@
 	<a href="https://unmaintained.tech/">
       <img src="https://unmaintained.tech/badge.svg" alt="No Maintenance Intended" title="No Maintenance Intended"/>
     </a>
-    <img src="https://img.shields.io/badge/type-Web_Interface-ff5722.svg" alt="Project type" title="Project type"/>
+    <img src="https://johng.io/badges/category/App.svg" alt="Project category" title="Project category"/>
     <img src="https://img.shields.io/github/languages/top/jerboa88/Custom-PiHole-Interface.svg" alt="Language" title="Language"/>
     <img src="https://img.shields.io/github/repo-size/jerboa88/Custom-PiHole-Interface.svg" alt="Repository size" title="Repository size"/>
     <a href="LICENSE">
